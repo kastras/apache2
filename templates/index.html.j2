@@ -1,0 +1,10 @@
+{# Comentario, clave de templates #}
+Hola servidor ansible {{ ansible_fqdn}}
+
+{% if ansible_distribution == "Fedora" %}
+Este sistema es fedora.
+{% endif %}
+
+{%for usuario in lista_usuarios %}
+{{ usuario }}
+{% endfor %}

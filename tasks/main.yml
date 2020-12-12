@@ -1,0 +1,13 @@
+- name: instalar apache
+  include: instalar-apache2.yml
+
+- name: copiamos el index.html
+  template: src=index.html.j2 dest=/var/www/html/index.html
+
+- name: Instalamos paquetes
+  apt: name={{ item }} state=latest
+  with_items: "{{ lista_paquetes }}"
+
+- name: Creamos usuarios necesarios
+  user: name={{ item.nombre }} groups={{ item.grupo }}
+  with_items: "{{ diccionario_usuarios }}"

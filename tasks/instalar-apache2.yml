@@ -1,0 +1,6 @@
+#version ubuntu
+- name: Instalamos apache2
+  apt: name=apache2 state=latest
+
+- name: iniciamos y habilitamos el servicio apache2
+  service: name=apache2 state=started enabled=true

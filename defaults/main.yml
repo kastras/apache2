@@ -1,0 +1,9 @@
+lista_usuarios:
+  - root
+  - alberto
+  - www-data
+lista_paquetes: { "mysql-server" , "php7.2" , "phpmyadmin" }
+
+diccionario_usuarios:
+- {nombre: "usuario1", grupo: "www-data"}
+- {nombre: "usuario2", grupo: "www-data"}
